@@ -1,0 +1,40 @@
+[versions]
+packetevents = "2.9.5"
+spigot-api = "1.21.6-R0.1-SNAPSHOT"
+bungeecord-api = "1.19-R0.1-SNAPSHOT"
+velocity-api = "3.4.0-SNAPSHOT"
+sponge-api = "13.1.0-SNAPSHOT"
+
+# Fabric related
+minecraft = "1.21.8"
+fabric-loom = "1.11-SNAPSHOT"
+fabric-yarn = "1.21.8+build.1"
+fabric-api = "0.133.4+1.21.8"
+fabric-loader = "0.17.2"
+
+# Plugins
+shadow = "9.1.0"
+run-task = "2.3.1"
+blossom = "2.1.0"
+sponge-gradle = "2.3.0"
+
+[libraries]
+spigot-api = { module = "org.spigotmc:spigot-api", version.ref = "spigot-api" }
+bungeecord-api = { module = "net.md-5:bungeecord-api", version.ref = "bungeecord-api" }
+velocity-api = { module = "com.velocitypowered:velocity-api", version.ref = "velocity-api" }
+
+packetevents-api = { module = "com.github.retrooper:packetevents-api", version.ref = "packetevents" }
+packetevents-spigot = { module = "com.github.retrooper:packetevents-spigot", version.ref = "packetevents" }
+packetevents-bungeecord = { module = "com.github.retrooper:packetevents-bungeecord", version.ref = "packetevents" }
+packetevents-fabric = { module = "com.github.retrooper:packetevents-fabric", version.ref = "packetevents" }
+packetevents-sponge = { module = "com.github.retrooper:packetevents-sponge", version.ref = "packetevents" }
+packetevents-velocity = { module = "com.github.retrooper:packetevents-velocity", version.ref = "packetevents" }
+
+[plugins]
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow"}
+blossom = { id = "net.kyori.blossom", version.ref = "blossom" }
+run-paper = { id = "xyz.jpenilla.run-paper", version.ref = "run-task" }
+run-velocity  = { id = "xyz.jpenilla.run-velocity",  version.ref = "run-task" }
+run-waterfall = { id = "xyz.jpenilla.run-waterfall", version.ref = "run-task" }
+fabric-loom = { id = "fabric-loom", version.ref = "fabric-loom" }
+sponge = { id = "org.spongepowered.gradle.plugin", version.ref = "sponge-gradle" }

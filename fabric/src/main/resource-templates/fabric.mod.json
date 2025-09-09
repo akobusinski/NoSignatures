@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "{{ id }}",
+  "name": "{{ name }}",
+  "version": "{{ version }}",
+  "description": "{{ description }}",
+  "authors": ["{{ author }}"],
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "wtf.gacek.nosignatures.NoSignaturesFabricClient"
+    ],
+    "server": [
+      "wtf.gacek.nosignatures.NoSignaturesFabricServer"
+    ]
+  },
+
+  "depends": {
+    "minecraft": ">={{ minimum_minecraft_version }}",
+    "fabricloader": ">={{ fabric_loader_version }}",
+    "fabric": "*"
+  }
+}

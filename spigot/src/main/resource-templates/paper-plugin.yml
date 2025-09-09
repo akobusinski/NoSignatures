@@ -1,0 +1,14 @@
+name: "{{ name }}"
+main: wtf.gacek.nosignatures.NoSignaturesSpigot
+version: "{{ version }}"
+description: "{{ description }}"
+author: "{{ author }}"
+website: "{{ website }}"
+api-version: 1.19
+supports-folia: true
+dependencies:
+  server:
+    packetevents:
+      load: BEFORE
+      required: true
+      join-classpath: true

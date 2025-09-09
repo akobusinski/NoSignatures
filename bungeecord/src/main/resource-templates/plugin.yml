@@ -1,0 +1,8 @@
+name: "{{ name }}"
+main: wtf.gacek.nosignatures.NoSignaturesBungeeCord
+version: "{{ version }}"
+description: "{{ description }}"
+author: "{{ author }}"
+website: "{{ website }}"
+depend:
+  - packetevents
