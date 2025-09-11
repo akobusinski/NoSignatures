@@ -91,4 +91,4 @@ jobs:
                 name: build-artifacts
                 path: |
                   build/*-all.jar
-                  !build/common-*.jar
+                  !build/*-common-*.jar
