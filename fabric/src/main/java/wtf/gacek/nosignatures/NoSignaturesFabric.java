@@ -3,7 +3,7 @@ package wtf.gacek.nosignatures;
 import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 
-public class NoSignaturesFabricServer implements DedicatedServerModInitializer {
+public class NoSignaturesFabric implements DedicatedServerModInitializer {
     private final NoSignaturesCore core = new NoSignaturesCore();
 
     @Override

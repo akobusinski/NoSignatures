@@ -27,15 +27,6 @@ sourceSets {
     }
 }
 
-loom {
-    splitEnvironmentSourceSets()
-
-    mods.create(rootProject.property("id") as String) {
-        sourceSet(sourceSets.main.get())
-        sourceSet(sourceSets.getByName("client"))
-    }
-}
-
 tasks.shadowJar {
     configurations = emptyList()
 
