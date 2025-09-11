@@ -2,7 +2,6 @@ name: "Publish"
 
 on:
     push:
-        branches: ["master"]
         tags: ["v*.*.*"]
 
 jobs:
@@ -26,12 +25,14 @@ jobs:
             contents: write
         steps:
             - name: Download artifacts
-              uses: dawidd6/action-download-artifact@v11
+              uses: actions/download-artifact@v4
               with:
-                workflow: build.yml
                 name: build-artifacts
                 path: build
             
+            - name: Rename artifacts
+              run: find . -type f -name "*-all.jar" -exec bash -c 'f=$(basename $0); dir=$(dirname $0); mv "$0" "${dir}/${f/-all/}"' {} \;
+
             - name: Create release
               uses: softprops/action-gh-release@v2
               with:
