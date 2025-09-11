@@ -51,3 +51,9 @@ subprojects {
         destinationDirectory.set(rootProject.layout.buildDirectory)
     }
 }
+
+tasks.register("printVersion") {
+    doLast {
+        println(project.version)
+    }
+}
