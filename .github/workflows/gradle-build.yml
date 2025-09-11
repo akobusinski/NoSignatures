@@ -16,7 +16,7 @@ jobs:
             ref: ${{ github.ref }}
         permissions:
             security-events: write
+            contents: write
             packages: read
             actions: read
-            contents: read
         secrets: inherit
