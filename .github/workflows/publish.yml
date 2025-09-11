@@ -13,6 +13,11 @@ jobs:
             dependency_graph: false
             upload_artifacts: true
             ref: ${{ github.ref }}
+        permissions:
+            security-events: write
+            packages: read
+            actions: read
+            contents: read
 
     publish:
         runs-on: ubuntu-latest

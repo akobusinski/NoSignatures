@@ -14,3 +14,8 @@ jobs:
             dependency_graph: true
             upload_artifacts: false
             ref: ${{ github.ref }}
+        permissions:
+            security-events: write
+            packages: read
+            actions: read
+            contents: read
