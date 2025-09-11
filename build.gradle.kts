@@ -46,9 +46,11 @@ subprojects {
         dependsOn("shadowJar")
     }
 
-    // Move into root libs, instead of everything being inside of their own folder
-    tasks.withType<Jar> {
+    tasks.withType<AbstractArchiveTask> {
+        // Move into root build, instead of everything being inside their own folder
         destinationDirectory.set(rootProject.layout.buildDirectory)
+        // Prepend the rootProject name to every subproject
+        archiveBaseName = "${rootProject.name}-${project.name}"
     }
 }
 
